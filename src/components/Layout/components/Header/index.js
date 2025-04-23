@@ -9,10 +9,35 @@ import styles from './Header.module.scss';
 import images from '@/assets/images/index';
 import AccountItem from '@/components/AccountItem';
 import Button from '@/components/Button';
+import Menu from '@/components/Popper/Menu';
 
-const { LuSearch, IoCloseCircle, AiOutlineLoading3Quarters } = icons;
+const {
+    LuSearch,
+    IoCloseCircle,
+    AiOutlineLoading3Quarters,
+    FiMoreVertical,
+    CgKeyboard,
+    FaRegCircleQuestion,
+    TbMessageLanguage,
+} = icons;
 
 const cx = classNames.bind(styles);
+
+const MENU_ITEMS = [
+    {
+        icon: TbMessageLanguage,
+        title: 'English',
+    },
+    {
+        icon: FaRegCircleQuestion,
+        title: 'Feedback and help',
+        to: '/feedback',
+    },
+    {
+        icon: CgKeyboard,
+        title: 'Keyboard shortcuts',
+    },
+];
 
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
@@ -55,8 +80,14 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('actions')}>
-                    <Button text> Up load</Button>
+                    <Button text> Upload</Button>
                     <Button primary>Log in</Button>
+
+                    <Menu items={MENU_ITEMS}>
+                        <button className={cx('more-btn')}>
+                            <FiMoreVertical className={cx('icon-menu')} />
+                        </button>
+                    </Menu>
                 </div>
             </div>
         </header>
