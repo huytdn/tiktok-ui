@@ -10,6 +10,7 @@ import images from '@/assets/images/index';
 import AccountItem from '@/components/AccountItem';
 import Button from '@/components/Button';
 import Menu from '@/components/Popper/Menu';
+import { type } from '@testing-library/user-event/dist/type';
 
 const {
     LuSearch,
@@ -25,16 +26,31 @@ const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
     {
-        icon: TbMessageLanguage,
+        icon: <TbMessageLanguage />,
         title: 'English',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+            ],
+        },
     },
     {
-        icon: FaRegCircleQuestion,
+        icon: <FaRegCircleQuestion />,
         title: 'Feedback and help',
         to: '/feedback',
     },
     {
-        icon: CgKeyboard,
+        icon: <CgKeyboard />,
         title: 'Keyboard shortcuts',
     },
 ];
@@ -47,6 +63,15 @@ function Header() {
             setSearchResult([]);
         }, 0);
     }, []);
+
+    const handleMenuChange = (menuItem) => {
+        switch (menuItem.type) {
+            case 'language':
+                //handle change
+                break;
+            default:
+        }
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -84,7 +109,7 @@ function Header() {
                     <Button primary>Log in</Button>
 
                     <Menu items={MENU_ITEMS}>
-                        <button className={cx('more-btn')}>
+                        <button className={cx('more-btn')} onChange={handleMenuChange}>
                             <FiMoreVertical className={cx('icon-menu')} />
                         </button>
                     </Menu>

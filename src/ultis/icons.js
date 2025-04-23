@@ -6,6 +6,7 @@ import { FiMoreVertical } from 'react-icons/fi';
 import { TbMessageLanguage } from 'react-icons/tb';
 import { FaRegCircleQuestion } from 'react-icons/fa6';
 import { CgKeyboard } from 'react-icons/cg';
+import { IoIosArrowBack } from 'react-icons/io';
 
 const icons = {
     TbMessageLanguage,
@@ -16,6 +17,7 @@ const icons = {
     AiOutlineLoading3Quarters,
     IoCloseCircle,
     CgKeyboard,
+    IoIosArrowBack,
 };
 
 export default icons;
