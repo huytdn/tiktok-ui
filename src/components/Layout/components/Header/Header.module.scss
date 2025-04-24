@@ -100,6 +100,13 @@
     position: relative;
 }
 
+// action
+.action {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .more-btn {
     font-size: 2rem;
     margin-left: 24px;
@@ -108,4 +115,20 @@
     position: relative;
     top: 4px;
     cursor: pointer;
+}
+
+.action-btn {
+    color: #161823;
+    font-size: 2.4rem;
+    background-color: transparent;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
 }
