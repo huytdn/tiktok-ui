@@ -11,7 +11,8 @@ import images from '@/assets/images/index';
 import AccountItem from '@/components/AccountItem';
 import Button from '@/components/Button';
 import Menu from '@/components/Popper/Menu';
-import { type } from '@testing-library/user-event/dist/type';
+import { UploadIcon, MessageIcon, InboxIcon } from '@/components/icons/index';
+import Image from '@/components/Image';
 
 const {
     LuSearch,
@@ -21,9 +22,6 @@ const {
     CgKeyboard,
     FaRegCircleQuestion,
     TbMessageLanguage,
-    GrCloudUpload,
-    BiPaperPlane,
-    TbMessage2,
     FiUser,
     ImCoinPound,
     FiSettings,
@@ -145,17 +143,17 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <GrCloudUpload />
+                                    <UploadIcon className={cx('upload-icon')} />
                                 </button>
                             </Tippy>
                             <Tippy delay={[0, 200]} content="Message" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <BiPaperPlane />
+                                    <MessageIcon className={cx('message-icon')} />
                                 </button>
                             </Tippy>
                             <Tippy delay={[0, 200]} content="Notify" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <TbMessage2 />
+                                    <InboxIcon className={cx('inbox-icon')} />
                                 </button>
                             </Tippy>
                         </>
@@ -167,9 +165,9 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/410248ffc4234b0bbfa21e383be269bc~tplv-tiktokx-cropcenter:720:720.jpeg?dr=14579&refresh_token=a59b8281&x-expires=1745600400&x-signature=0LeVl%2B4VLNMXYb6bmm7tNXL9Dcw%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my"
+                                src="https://scontent.fhan15-2.fna.fbcdn.net/v/t39.30808-1/465279752_1701391183988938_8218705470512898222_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e99d92&_nc_ohc=Jdmrr4WhtRcQ7kNvwGY3t9g&_nc_oc=Adl311TN_DPJ-mBoPtSEiKdz39sm1PiG2CkDv17t3jC4d61K_HCqsAP9VfG5zV6fgT-AlkuBR3A0KFYsHK3IP6Qh&_nc_zt=24&_nc_ht=scontent.fhan15-2.fna&_nc_gid=Qft8ikKdPPcC1Nlv4IWSvw&oh=00_AfHoCJ5hm4HAKtkqtIKNJK9O3flOJOqjQDxMD5g1KbPfwQ&oe=68136A9E"
                                 alt="Tran Dinh Nhat Huy"
                             />
                         ) : (

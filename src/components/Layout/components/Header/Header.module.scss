@@ -96,15 +96,14 @@
     }
 }
 
-.action {
+.actions {
     position: relative;
 }
 
 // action
-.action {
-    position: relative;
+.actions {
     display: flex;
-    align-items: center;
+    align-items: end;
 }
 
 .more-btn {
@@ -123,12 +122,27 @@
     background-color: transparent;
     padding: 4px 12px;
     cursor: pointer;
+    display: inline-block;
+    align-items: center;
 }
 
 .user-avatar {
-    position: absolute;
+    margin-left: 12px;
     width: 32px;
     height: 32px;
     object-fit: cover;
     border-radius: 50%;
+    align-self: center;
+}
+
+.upload-icon {
+    margin-top: 6px;
+}
+
+.message-icon {
+    margin-bottom: 4px;
+}
+
+.inbox-icon {
+    margin-top: 6px;
 }
