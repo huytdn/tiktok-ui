@@ -1,6 +1,6 @@
 import Tippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
-import { Wrapper as PopperWrapper } from '@/components/Popper';
+import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Menu.module.scss';
 import MenuItem from './MenuItem';
 import Header from './Header';
@@ -35,7 +35,6 @@ function Menu({ children, items = [], onChange = defaultFn }) {
     };
     return (
         <Tippy
-           
             offset={[16, 8]}
             interactive
             delay={[0, 700]}

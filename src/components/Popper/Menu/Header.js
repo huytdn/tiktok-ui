@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
-import icons from '@/ultis/icons';
+import icons from '~/ultis/icons';
 
 const cx = classNames.bind(styles);
 

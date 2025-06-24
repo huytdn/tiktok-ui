@@ -1,13 +1,13 @@
 import classNames from 'classnames/bind';
-import icons from '@/ultis/icons';
+import icons from '~/ultis/icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import styles from './Header.module.scss';
-import images from '@/assets/images/index';
-import Button from '@/components/Button';
-import Menu from '@/components/Popper/Menu';
-import { UploadIcon, MessageIcon, InboxIcon } from '@/components/icons/index';
-import Image from '@/components/Image';
+import images from '~/assets/images/index';
+import Button from '~/components/Button';
+import Menu from '~/components/Popper/Menu';
+import { UploadIcon, MessageIcon, InboxIcon } from '~/components/icons/index';
+import Image from '~/components/Image';
 import Search from '../Search';
 
 const {
