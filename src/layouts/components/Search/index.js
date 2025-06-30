@@ -6,7 +6,7 @@ import AccountItem from '~/components/AccountItem';
 import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
 import { useDebounce } from '~/hook';
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchService';
 
 const { LuSearch, IoCloseCircle, AiOutlineLoading3Quarters } = icons;
 const cx = classNames.bind(styles);
